@@ -3,7 +3,7 @@
 		<div :class="`cv-actions editing-${$editing}`" ref="cvactions">
 			<div class="cv-actions__holder">
 
-				<ul class="public" :data-editing="$editing">
+				<!-- <ul class="public" :data-editing="$editing">
 					<li @click="toggleProCv();" v-if="allowPublicMessages" title="Curriculum vitae">
 						<span class="icon">
 							<i class="fa fa-file" style="color: inherit;" v-if="$pro"></i>
@@ -19,7 +19,7 @@
 						</span>
 						<label>Projet Pro</label>
 					</li>
-				</ul>
+				</ul> -->
 				
 
 				<ul class="public" :data-editing="$editing">
@@ -177,12 +177,12 @@
 			toggleView () {
 				this.curriculum.editing = !this.curriculum.editing;
 			},
-			toggleCvPro () {
-				this.curriculum.pro = true;
-			},
-			toggleProCv () {
-				this.curriculum.pro = false;
-			},
+			// toggleCvPro () {
+			// 	this.curriculum.pro = true;
+			// },
+			// toggleProCv () {
+			// 	this.curriculum.pro = false;
+			// },
 		},
 
 		i18n: {
@@ -285,16 +285,10 @@
 						align-items: center;
 						justify-content: center;
 						color: #555;
-						.fa-envelope {
-							// color: #2d6da4;
-						}
-						.fa-share-alt {
-							// color: #1877f2;
-						}
 						.fa-eye, .fa-save {
 							color: #2d6da4;
 						}
-						.fa-file, .fa-user, .fa-eye, .fa-save {
+						.fa-palette, .fa-th-list, .fa-file, .fa-user, .fa-eye, .fa-save {
 							color: var(--cv-color);
 						}
 						svg {

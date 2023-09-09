@@ -6,7 +6,7 @@
             <cv-actions/>
             <cv-header/>
 
-            <!-- <section-availability/>
+            <section-availability/>
             <section-presentation/>
             <section-find-me-at/>
             <section-education/>
@@ -15,9 +15,9 @@
             <section-skills/>
             <section-prizes/>
             <section-portfolio/>
-            <section-find-me-at/> -->
+            <section-find-me-at/>
 
-            <section-availability v-if="!$pro"/>
+            <!-- <section-availability v-if="!$pro"/>
             <section-presentation v-if="!$pro"/>
             <section-find-me-at v-if="!$pro"/>
             <section-education  v-if="!$pro"/>
@@ -26,12 +26,12 @@
             <section-skills v-if="!$pro"/>
             <section-prizes v-if="!$pro"/>
             <section-portfolio v-if="!$pro"/>
-            <section-find-me-at v-if="!$pro"/>
+            <section-find-me-at v-if="!$pro"/> -->
             <section-downloaded-cv v-if="application.downloadingCv"/>
 
-            <section-projet-pro v-if="$pro"/>
+            <!-- <section-projet-pro v-if="$pro"/>
             <section-hobby-loisirs v-if="$pro"/>
-            <section-job v-if="$pro"/>
+            <section-job v-if="$pro"/> -->
         </cv-wrapper>
     </div>
 </template>
@@ -58,9 +58,9 @@
     const SectionDownloadedCv = () => import(/* webpackChunkName: "SectionDownloadedCv" */ '@/components/curriculum/sections/DownloadedCv.vue')
 
     // Projet Pro
-    const SectionProjetPro = () => import(/* webpackChunkName: "SectionProjetPro" */ '@/components/curriculum/sections/ProjetPro.vue')
-    const SectionHobbyLoisirs = () => import(/* webpackChunkName: "SectionHobbyLoisirs" */ '@/components/curriculum/sections/HobbyLoisirs.vue')
-    const SectionJob = () => import(/* webpackChunkName: "SectionHobbyLoisirs" */ '@/components/curriculum/sections/Job.vue')
+    // const SectionProjetPro = () => import(/* webpackChunkName: "SectionProjetPro" */ '@/components/curriculum/sections/ProjetPro.vue')
+    // const SectionHobbyLoisirs = () => import(/* webpackChunkName: "SectionHobbyLoisirs" */ '@/components/curriculum/sections/HobbyLoisirs.vue')
+    // const SectionJob = () => import(/* webpackChunkName: "SectionHobbyLoisirs" */ '@/components/curriculum/sections/Job.vue')
 
     export default {
         name: "cv-main",
@@ -79,9 +79,6 @@
             SectionPortfolio,
             SectionFindMeAt,
             SectionDownloadedCv,
-            SectionProjetPro,
-            SectionHobbyLoisirs,
-            SectionJob,
         },
         data() {
             return {
